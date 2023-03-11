@@ -45,8 +45,8 @@ def animation(i):
     global ran1
     if ran0 == True:
         try:
-            min = float(ran2[0])
-            max = float(ran2[1])
+            min = float(xlim)
+            max = float(ylim)
             if min < max:
                 x = np.arange(min, max, 0.01)
                 ran2 = [min, max]
@@ -69,8 +69,8 @@ def animation(i):
         ax.plot()
     ax.axhline(0, color="gray")
     ax.axvline(0, color="gray")
-    ax.set_xlim(-10, 10)
-    ax.set_ylim(-10, 10)
+    ax.set_xlim(-20, 20)
+    ax.set_ylim(-20, 20)
     ani.event_source.stop()
 
 
@@ -216,7 +216,6 @@ actualizar = tkinter.IntVar()
 actualizar1 = tkinter.IntVar()
 actualizar2 = tkinter.IntVar()
 
-textboxrang.place(x=460, y=490)
 textboxfunc.place(x=10, y=40)
 labelopciones = tkinter.Label(ventana, text="Digite Su Funcion", font="Arial")
 labelopciones.place(x=10, y=10)
