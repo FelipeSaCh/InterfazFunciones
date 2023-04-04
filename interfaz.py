@@ -178,13 +178,13 @@ def falsa():
                 fa = prueba.replace('x', str(a))
             break
     while True:
-        b = rnd.randint(0, 1000)
+        a = rnd.randint(-1000, 0)
         fb = prueba.replace('x', str(b))
         if (eval(fb) > 0):
             break
         else:
             if (eval(fb) < 0):
-                b = rnd.randint(0, 1000)
+                a = rnd.randint(-1000, 0)
             if (eval(fa) > 0):
                 fb = prueba.replace('x', str(b))
                 break
